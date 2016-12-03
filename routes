@@ -1,2 +1,4 @@
-/                 HomeR     GET
-/produto          ProdutoR  POST
+/usuario                        UsuarioR        POST
+/usuarios                       UsuariosR       GET
+/usuario/delete/#UsuarioId      DelUsuarioR     DELETE
+/usuario/update/#UsuarioId      UpdUsuarioR     PUT

@@ -11,6 +11,6 @@ import Yesod
 -- import Add
 -- PARA CADA NOVO GRUPO DE HANDLERS, CRIAR UM AQUIVO
 -- DE HANDLER NOVO E IMPORTAR AQUI
-import Home
+import Handler.Usuario
 ------------------
 mkYesodDispatch "App" resourcesApp
