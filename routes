@@ -11,3 +11,4 @@
 /cliente/delete/#ClienteId      DelClienteR     DELETE
 /cliente/update/#ClienteId      UpdClienteR     PUT
 /cartucho                       CartuchoR       POST
+/cartuchos                      CartuchosR      GET

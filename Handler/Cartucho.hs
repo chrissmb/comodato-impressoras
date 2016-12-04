@@ -15,5 +15,7 @@ postCartuchoR = do
     cid <- runDB $ insert cts
     sendResponse (object [pack "resp" .= pack ("CREATED " ++ (show $ fromSqlKey cid))])
 
-
-    
+getCartuchosR :: Handler Html
+getCartuchosR = do
+    cts <- runDB $ selectList [] [Asc CartuchoModelo]
+    sendResponse (object [pack "resp" .= toJSON cts])
