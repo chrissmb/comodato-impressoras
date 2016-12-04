@@ -30,6 +30,7 @@ Impressora json
     modelo Text
     multifuncional Bool
     tipoCartucho TipoCartucho
+    colorida Bool
 
 Cartucho json
     modelo Text

@@ -34,7 +34,8 @@ putUpdImpressoraR pid = do
     runDB $ get404 pid
     runDB $ update pid [ImpressoraModelo =. (impressoraModelo prts)
                        ,ImpressoraMultifuncional =. (impressoraMultifuncional prts)
-                       ,ImpressoraTipoCartucho =. (impressoraTipoCartucho prts)]
+                       ,ImpressoraTipoCartucho =. (impressoraTipoCartucho prts)
+                       ,ImpressoraColorida =. (impressoraColorida prts)]
     sendResponse (object [pack "resp" .= pack "UPDATED!"])  
     
     
