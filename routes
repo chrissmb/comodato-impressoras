@@ -4,6 +4,7 @@
 /usuario/update/#UsuarioId      UpdUsuarioR     PUT
 /impressora                     ImpressoraR     POST
 /impressoras                    ImpressorasR    GET
+/impressoras/#CartuchoId        ImpressorasCartuchoR    GET
 /impressora/delete/#ImpressoraId      DelImpressoraR     DELETE
 /impressora/update/#ImpressoraId      UpdImpressoraR     PUT
 /cliente                        ClienteR        POST
