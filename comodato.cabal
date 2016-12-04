@@ -12,6 +12,7 @@ executable          comodato
                     Handler.Impressora
                     Handler.Cliente
                     Handler.Cartucho
+                    Handler.ImpressoraCartucho
 ------------------
                     
   ghc-options:      -Wall -fwarn-tabs -O2

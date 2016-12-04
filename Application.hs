@@ -15,6 +15,7 @@ import Handler.Usuario
 import Handler.Impressora
 import Handler.Cliente
 import Handler.Cartucho
+import Handler.ImpressoraCartucho
 
 ------------------
 mkYesodDispatch "App" resourcesApp
