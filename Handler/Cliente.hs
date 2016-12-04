@@ -24,3 +24,16 @@ deleteDelClienteR cid = do
     runDB $ get404 cid
     runDB $ delete cid
     sendResponse (object [pack "resp" .= pack "DELETED!"])      
+    
+    
+-- CASO SEJA UM CAMPO, USAMOS PATCH
+-- patchUpdateR
+putUpdClienteR :: ClienteId -> Handler ()
+putUpdClienteR cid = do
+    clis <- requireJsonBody :: Handler Cliente
+    runDB $ get404 cid
+    runDB $ update cid [ClienteRazao =. (clienteRazao clis)
+                      , ClienteCnpj  =. (clienteCnpj clis)
+                      , ClienteEmail =. (clienteEmail clis)]
+    sendResponse (object [pack "resp" .= pack "UPDATED!"])  
+        
