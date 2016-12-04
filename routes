@@ -15,3 +15,4 @@
 /cartucho/delete/#CartuchoId    DelCartuchoR    DELETE
 /impressoracartucho                     ImpressoraCartuchoR     POST
 /impressoracartuchos                    ImpressoraCartuchosR    GET
+/impressoracartucho/delete/#ImpressoraCartuchoId    DelImpressoraCartuchoR  DELETE

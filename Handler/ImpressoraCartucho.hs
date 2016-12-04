@@ -19,3 +19,9 @@ getImpressoraCartuchosR :: Handler Html
 getImpressoraCartuchosR = do
     prtcts <- runDB $ selectList [] [Asc ImpressoraId]
     sendResponse (object [pack "resp" .= toJSON prtcts])
+
+deleteDelImpressoraCartuchoR :: ImpressoraCartuchoId -> Handler ()
+deleteDelImpressoraCartuchoR pid = do
+    runDB $ get404 pid
+    runDB $ delete pid
+    sendResponse (object [pack "resp" .= pack "DELETED!"])
