@@ -13,5 +13,8 @@ postClienteR = do
     cid <- runDB $ insert clis
     sendResponse (object [pack "resp" .= pack ("CREATED " ++ (show $ fromSqlKey cid))])
     
-
+getClientesR :: Handler Html
+getClientesR = do
+    clis <- runDB $ selectList [] [Asc ClienteRazao]
+    sendResponse (object [pack "resp" .= toJSON clis])
     
