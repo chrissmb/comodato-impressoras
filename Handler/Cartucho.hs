@@ -24,4 +24,13 @@ deleteDelCartuchoR :: CartuchoId -> Handler ()
 deleteDelCartuchoR cid = do
     runDB $ get404 cid
     runDB $ delete cid
-    sendResponse (object [pack "resp" .= pack "DELETED!"])  
+    sendResponse (object [pack "resp" .= pack "DELETED!"])
+
+putUpdCartuchoR :: CartuchoId -> Handler ()
+putUpdCartuchoR cid = do
+    cts <- requireJsonBody :: Handler Cartucho
+    runDB $ get404 cid
+    runDB $ update cid [CartuchoModelo =. (cartuchoModelo cts)
+                       ,CartuchoCor =. (cartuchoCor cts)
+                       ,CartuchoTipo =. (cartuchoTipo cts)]
+    sendResponse (object [pack "resp" .= pack "UPDATED!"])

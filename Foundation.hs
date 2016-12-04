@@ -35,7 +35,7 @@ Impressora json
 Cartucho json
     modelo Text
     cor TipoCor
-    tipoCartucho TipoCartucho
+    tipo TipoCartucho
 
 ImpressoraCartucho json
     impressoraId ImpressoraId
