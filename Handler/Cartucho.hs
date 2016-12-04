@@ -19,3 +19,9 @@ getCartuchosR :: Handler Html
 getCartuchosR = do
     cts <- runDB $ selectList [] [Asc CartuchoModelo]
     sendResponse (object [pack "resp" .= toJSON cts])
+
+deleteDelCartuchoR :: CartuchoId -> Handler ()
+deleteDelCartuchoR cid = do
+    runDB $ get404 cid
+    runDB $ delete cid
+    sendResponse (object [pack "resp" .= pack "DELETED!"])  
