@@ -2,3 +2,7 @@
 /usuarios                       UsuariosR       GET
 /usuario/delete/#UsuarioId      DelUsuarioR     DELETE
 /usuario/update/#UsuarioId      UpdUsuarioR     PUT
+/cliente                        ClienteR        POST
+/clientes                       ClientesR       GET
+/cliente/delete/#ClienteId      DelClienteR     DELETE
+/cliente/update/#ClienteId      UpdClienteR     PUT
