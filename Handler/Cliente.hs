@@ -18,3 +18,9 @@ getClientesR = do
     clis <- runDB $ selectList [] [Asc ClienteRazao]
     sendResponse (object [pack "resp" .= toJSON clis])
     
+
+deleteDelClienteR :: ClienteId -> Handler ()
+deleteDelClienteR cid = do
+    runDB $ get404 cid
+    runDB $ delete cid
+    sendResponse (object [pack "resp" .= pack "DELETED!"])      
