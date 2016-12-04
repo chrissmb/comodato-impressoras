@@ -8,6 +8,8 @@ import Yesod
 import Data.Text
 import Database.Persist.Postgresql
     ( ConnectionPool, SqlBackend, runSqlPool)
+import Handler.TipoCartucho
+import Handler.TipoCor
 
 data App = App {connPool :: ConnectionPool }
 
@@ -26,10 +28,13 @@ Cliente json
 
 Impressora json
     modelo Text
+    multifuncional Bool
+    tipoCartucho TipoCartucho
 
 Cartucho json
     modelo Text
-    cor Text
+    cor TipoCor
+    tipoCartucho TipoCartucho
 
 ImpressoraCartucho json
     impressoraId ImpressoraId

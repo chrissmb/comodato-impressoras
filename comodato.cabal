@@ -9,6 +9,8 @@ executable          comodato
   other-modules:    Foundation
                     Application
                     Handler.Usuario
+                    Handler.Impressora
+------------------
                     
   ghc-options:      -Wall -fwarn-tabs -O2
 
@@ -20,5 +22,6 @@ executable          comodato
                 , persistent-postgresql
                 , aeson
                 , monad-logger
+                , persistent-template
 
   ghc-options:    -threaded -O2 -rtsopts -with-rtsopts=-N
