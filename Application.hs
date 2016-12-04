@@ -13,5 +13,9 @@ import Yesod
 -- DE HANDLER NOVO E IMPORTAR AQUI
 import Handler.Usuario
 import Handler.Impressora
+import Handler.Cliente
+import Handler.TipoCartucho
+import Handler.TipoCor
+
 ------------------
 mkYesodDispatch "App" resourcesApp

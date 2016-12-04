@@ -10,6 +10,9 @@ executable          comodato
                     Application
                     Handler.Usuario
                     Handler.Impressora
+                    Handler.Cliente
+                    Handler.TipoCartucho
+                    Handler.TipoCor
 ------------------
                     
   ghc-options:      -Wall -fwarn-tabs -O2
