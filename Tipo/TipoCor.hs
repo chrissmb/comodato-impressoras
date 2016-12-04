@@ -1,7 +1,7 @@
 -- TipoCartucho.hs
 {-# LANGUAGE TemplateHaskell #-}
 {-# LANGUAGE OverloadedStrings #-}
-module Handler.TipoCor where
+module Tipo.TipoCor where
 
 import Database.Persist.TH
 import Prelude

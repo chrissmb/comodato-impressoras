@@ -8,8 +8,8 @@ import Yesod
 import Data.Text
 import Database.Persist.Postgresql
     ( ConnectionPool, SqlBackend, runSqlPool)
-import Handler.TipoCartucho
-import Handler.TipoCor
+import Tipo.TipoCartucho
+import Tipo.TipoCor
 
 data App = App {connPool :: ConnectionPool }
 

@@ -11,8 +11,6 @@ executable          comodato
                     Handler.Usuario
                     Handler.Impressora
                     Handler.Cliente
-                    Handler.TipoCartucho
-                    Handler.TipoCor
                     Handler.Cartucho
 ------------------
                     

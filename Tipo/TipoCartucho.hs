@@ -2,7 +2,7 @@
 {-# LANGUAGE TemplateHaskell #-}
 {-# LANGUAGE OverloadedStrings #-}
 
-module Handler.TipoCartucho where
+module Tipo.TipoCartucho where
 
 import Database.Persist.TH
 import Prelude
