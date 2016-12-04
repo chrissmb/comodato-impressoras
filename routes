@@ -6,3 +6,7 @@
 /impressoras                    ImpressorasR    GET
 /impressora/delete/#ImpressoraId      DelImpressoraR     DELETE
 /impressora/update/#ImpressoraId      UpdImpressoraR     PUT
+/cliente                        ClienteR        POST
+/clientes                       ClientesR       GET
+/cliente/delete/#ClienteId      DelClienteR     DELETE
+/cliente/update/#ClienteId      UpdClienteR     PUT
