@@ -20,6 +20,14 @@ getCartuchosR = do
     cts <- runDB $ selectList [] [Asc CartuchoModelo]
     sendResponse (object [pack "resp" .= toJSON cts])
 
+getCartuchosImpressoraR :: ImpressoraId -> Handler Html
+getCartuchosImpressoraR pid = do
+    cts <- runDB $ (rawSql "SELECT ?? \
+            \FROM cartucho INNER JOIN impressora_cartucho \
+            \ON cartucho.id=impressora_cartucho.cartuchoid \
+            \AND impressora_cartucho.impressoraid=?" [toPersistValue pid])::Handler [(Entity Cartucho)]
+    sendResponse (object [pack "resp" .= toJSON cts]) 
+
 deleteDelCartuchoR :: CartuchoId -> Handler ()
 deleteDelCartuchoR cid = do
     runDB $ get404 cid
