@@ -14,3 +14,8 @@ postImpressoraCartuchoR = do
     prtcts <- requireJsonBody :: Handler ImpressoraCartucho
     pid <- runDB $ insert prtcts
     sendResponse (object [pack "resp" .= pack ("CREATED " ++ (show $ fromSqlKey pid))])
+
+getImpressoraCartuchosR :: Handler Html
+getImpressoraCartuchosR = do
+    prtcts <- runDB $ selectList [] [Asc ImpressoraId]
+    sendResponse (object [pack "resp" .= toJSON prtcts])

@@ -13,4 +13,5 @@
 /cartucho                       CartuchoR       POST
 /cartuchos                      CartuchosR      GET
 /cartucho/delete/#CartuchoId    DelCartuchoR    DELETE
-/impressoraCartucho                     ImpressoraCartuchoR     POST
+/impressoracartucho                     ImpressoraCartuchoR     POST
+/impressoracartuchos                    ImpressoraCartuchosR    GET
