@@ -42,13 +42,13 @@ ImpressoraCartucho json
     cartuchoId CartuchoId
     UniqueImpressoraCartucho impressoraId cartuchoId
 
-Comodato
+Comodato json
     impressoraId ImpressoraId
     clienteId ClienteId
     valor Double
     franquia Int
 
-Consumo
+Consumo json
     comodatoId ComodatoId
     consumo Int
 
