@@ -20,5 +20,6 @@
 /impressoracartucho/delete/#ImpressoraCartuchoId    DelImpressoraCartuchoR  DELETE
 /comodato                       ComodatoR       POST
 /comodatos                      ComodatosR      GET
+/comodato/delete/#ComodatoId    DelComodatoR    DELETE
 
 

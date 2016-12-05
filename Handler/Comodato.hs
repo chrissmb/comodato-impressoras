@@ -22,6 +22,18 @@ getComodatosR = do
     sendResponse (object [pack "resp" .= toJSON comos])
     
     
+deleteDelComodatoR :: ComodatoId -> Handler ()
+deleteDelComodatoR cid = do
+    runDB $ get404 cid
+    runDB $ delete cid
+    sendResponse (object [pack "resp" .= pack "DELETED!"])
+    
+    
+    
+    
+
+    
+ 
  
  
   
