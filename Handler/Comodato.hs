@@ -13,6 +13,15 @@ postComodatoR = do
     comos <- requireJsonBody :: Handler Comodato
     cid <- runDB $ insert comos
     sendResponse (object [pack "resp" .= pack ("CREATED " ++ (show $ fromSqlKey cid))])
+
     
+
+getComodatosR :: Handler Html
+getComodatosR = do
+    comos <- runDB $ selectList [] [Asc ComodatoId]
+    sendResponse (object [pack "resp" .= toJSON comos])
+    
+    
+ 
  
   
