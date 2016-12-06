@@ -36,4 +36,11 @@ putUpdClienteR cid = do
                       , ClienteCnpj  =. (clienteCnpj clis)
                       , ClienteEmail =. (clienteEmail clis)]
     sendResponse (object [pack "resp" .= pack "UPDATED!"])  
-        
+
+
+getClienteIdR :: ClienteId -> Handler Html
+getClienteIdR cid = do
+    cli <- runDB $ (rawSql "SELECT ??\
+            \FROM cliente \
+            \where cliente.id = ?" [toPersistValue cid])::Handler [(Entity Cliente)]
+    sendResponse (object [pack "resp" .= toJSON cli])         
