@@ -18,3 +18,9 @@ getConsumosR :: Handler Html
 getConsumosR = do
     cons <- runDB $ selectList [] [Asc ConsumoId]
     sendResponse (object [pack "resp" .= toJSON cons])    
+    
+deleteDelConsumoR :: ConsumoId -> Handler ()
+deleteDelConsumoR cid = do
+    runDB $ get404 cid
+    runDB $ delete cid
+    sendResponse (object [pack "resp" .= pack "DELETED!"])    
