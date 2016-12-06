@@ -22,4 +22,5 @@
 /comodatos                      ComodatosR      GET
 /comodato/delete/#ComodatoId    DelComodatoR    DELETE
 /comodato/update/#ComodatoId    UpdComodatoR    PUT
+/comodato/#ComodatoId           ComodatoIdR     GET
 

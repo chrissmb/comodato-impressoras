@@ -41,9 +41,19 @@ putUpdComodatoR cid = do
                       ,ComodatoFranquia =. (comodatoFranquia comos)]
     sendResponse (object [pack "resp" .= pack "UPDATED!"])  
     
+
+getComodatoIdR :: ComodatoId -> Handler Html
+getComodatoIdR cid = do
+    comos <- runDB $ (rawSql "SELECT ??,??,??\
+            \FROM comodato  INNER JOIN impressora  \
+            \ON comodato.impressora_id=impressora.id \
+            \inner join cliente on comodato.cliente_id = cliente.id \
+            \AND comodato.id=?" [toPersistValue cid])::Handler [(Entity Comodato, Entity Impressora, Entity Cliente)]
+    sendResponse (object [pack "resp" .= toJSON comos]) 
     
-  
- 
+-- select c.id, i.modelo, cli.razao, c.valor, c.franquia from comodato c inner join impressora i on c.impressora_id = i.id inner join cliente cli on c.cliente_id = cli.id
+
+
 
     
     
