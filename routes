@@ -27,3 +27,4 @@
 /consumo                        ConsumoR        POST
 /consumos                       ConsumosR       GET
 /consumo/delete/#ConsumoId      DelConsumoR     DELETE
+/consumo/update/#ConsumoId      UpdConsumoR     PUT

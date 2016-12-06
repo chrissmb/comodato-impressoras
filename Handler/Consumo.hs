@@ -24,3 +24,15 @@ deleteDelConsumoR cid = do
     runDB $ get404 cid
     runDB $ delete cid
     sendResponse (object [pack "resp" .= pack "DELETED!"])    
+    
+
+
+-- CASO SEJA UM CAMPO, USAMOS PATCH
+-- patchUpdateR
+putUpdConsumoR :: ConsumoId -> Handler ()
+putUpdConsumoR cid = do
+    cons <- requireJsonBody :: Handler Consumo
+    runDB $ get404 cid
+    runDB $ update cid [ConsumoComodatoId =. (consumoComodatoId cons)
+                      , ConsumoConsumo =. (consumoConsumo cons)]
+    sendResponse (object [pack "resp" .= pack "UPDATED!"])      
