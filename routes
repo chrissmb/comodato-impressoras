@@ -25,3 +25,4 @@
 /comodato/update/#ComodatoId    UpdComodatoR    PUT
 /comodato/#ComodatoId           ComodatoIdR     GET
 /consumo                        ConsumoR        POST
+/consumos                       ConsumosR       GET
