@@ -28,3 +28,5 @@
 /consumos                       ConsumosR       GET
 /consumo/delete/#ConsumoId      DelConsumoR     DELETE
 /consumo/update/#ConsumoId      UpdConsumoR     PUT
+/consumo/#ConsumoId             ConsumoIdR      GET
+/consumoComodato/#ComodatoId    ConsumoComodatoId   GET
