@@ -31,26 +31,31 @@ Impressora json
     multifuncional Bool
     tipoCartucho TipoCartucho
     colorida Bool
+    deriving Show
 
 Cartucho json
     modelo Text
     cor TipoCor
     tipo TipoCartucho
+    deriving Show
 
 ImpressoraCartucho json
     impressoraId ImpressoraId
     cartuchoId CartuchoId
     UniqueImpressoraCartucho impressoraId cartuchoId
+    deriving Show
 
 Comodato json
     impressoraId ImpressoraId
     clienteId ClienteId
     valor Double
     franquia Int
+    deriving Show
 
 Consumo json
     comodatoId ComodatoId
     consumo Int
+    deriving Show
 
 |]
 
