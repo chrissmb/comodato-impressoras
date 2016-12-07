@@ -24,9 +24,10 @@
 /comodato/delete/#ComodatoId    DelComodatoR    DELETE
 /comodato/update/#ComodatoId    UpdComodatoR    PUT
 /comodato/#ComodatoId           ComodatoIdR     GET
+/consumoporcomodato/#ComodatoId    ConsumoPorComodatoIdR   GET
 /consumo                        ConsumoR        POST
 /consumos                       ConsumosR       GET
 /consumo/delete/#ConsumoId      DelConsumoR     DELETE
 /consumo/update/#ConsumoId      UpdConsumoR     PUT
 /consumo/#ConsumoId             ConsumoIdR      GET
-/consumoComodato/#ComodatoId    ConsumoComodatoId   GET
+

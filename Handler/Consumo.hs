@@ -48,12 +48,12 @@ getConsumoIdR cid = do
     sendResponse (object [pack "resp" .= toJSON cons]) 
     
     
-getConsumoComodatoIdR :: ConsumoId -> Handler Html
-getConsumoComodatoIdR cid = do
+getConsumoPorComodatoIdR :: ComodatoId -> Handler Html
+getConsumoPorComodatoIdR cid = do
     cons <- runDB $ (rawSql "SELECT ??,??\
             \FROM consumo  INNER JOIN comodato  \
             \ON consumo.comodato_id=comodato.id \
             \AND comodato.id=?" [toPersistValue cid])::Handler [(Entity Consumo, Entity Comodato)]
-    sendResponse (object [pack "resp" .= toJSON cons]) 
+    sendResponse (object [pack "resp" .= toJSON cons])
         
     
