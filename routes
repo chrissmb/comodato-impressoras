@@ -16,6 +16,7 @@
 /cartuchos                      CartuchosR      GET
 /cartuchosimpressora/#ImpressoraId      CartuchosImpressoraR    GET
 /cartucho/delete/#CartuchoId    DelCartuchoR    DELETE
+/cartucho/update/#CartuchoId    UpdCartuchoR    PUT
 /impressoracartucho                     ImpressoraCartuchoR     POST
 /impressoracartuchos                    ImpressoraCartuchosR    GET
 /impressoracartucho/delete/#ImpressoraCartuchoId    DelImpressoraCartuchoR  DELETE
